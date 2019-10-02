@@ -1,0 +1,202 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+}
+
+body {
+    background: url("../images/body.jpg")no-repeat center center fixed;
+    background-size: cover;
+    color: #666;
+    font-family: sans-serif;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.568);
+    font-family: 'Permanent Marker', cursive;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4.5em;
+    text-align: center;
+    text-shadow: 0.05em 0.05em rgba(88, 85, 85, 0.411);
+}
+
+main {
+    flex: 1;
+    padding: 1.5em;
+}
+
+main:after {
+    content: "\00a0";
+    /* &nbsp; */
+    display: block;
+    margin-top: 1em;
+    height: 0px;
+    visibility: hidden;
+}
+
+main>article {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+main>article>button {
+    align-content: center;
+    justify-content: center;
+}
+
+main>article>h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.rules {
+    margin-top: 1em;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.568);
+    border-top: 1px solid #666;
+    margin-top: 20px;
+    padding-top: 30px;
+    font-size: 1.25em;
+    width: 100%;
+    flex: none;
+    text-align: center;
+}
+
+#timer, #category {
+    margin-top: 1em;
+}
+
+#category {
+    text-align: center;
+}
+
+#startGameBtn {
+    font-size: 1.5em;
+}
+
+#gameBoard {
+    padding: 10px 0;
+}
+
+#letterButtons {
+    display: inline-flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#letterButtons button:not(last-child) {
+    margin: 4px 4px;
+    cursor: pointer;
+    max-width: 7em;
+    min-width: 7em;
+}
+
+#letterBoxes {
+    text-align: center;
+}
+
+#letterBoxes li {
+    display: inline-flex;
+    padding-right: 0.3em;
+}
+
+#letterBoxes input {
+    border: 1px solid rgba(245, 245, 245, 0.541);
+    color: #666666;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 2em;
+    margin-top: 1em;
+    padding: 20px 5px;
+    text-align: center;
+    width: 2em;
+}
+
+#hangman {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.342);
+    margin: 1em auto 0 auto;
+}
+
+#message {
+    padding-top: 20px;
+    font-size: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    -moz-user-select: text;
+    background-color: #fff;
+    background: transparent;
+    border-radius: 30px;
+    border: 0;
+    border: 2px solid rgb(7, 7, 7);
+    cursor: pointer;
+    display: block;
+    font: inherit;
+    line-height: normal;
+    margin-bottom: 16px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    padding: 16px 36px 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.btn--stripe {
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(102, 102, 102, 0.404);
+}
+
+.btn--stripe:disabled {
+    background-color: #999;
+    border-color: #666;
+}
+
+.btn--stripe:hover {
+    background-color: rgba(102, 102, 102, 0.651);
+    border-color: #000;
+}
+
+.btn--stripe:disabled:after, .btn--stripe:hover:after {
+    background-image: -webkit-repeating-linear-gradient( 45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    background-image: repeating-linear-gradient( 45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #000;
+}
